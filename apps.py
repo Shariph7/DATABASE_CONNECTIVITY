@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect
 import pymongo
 app = Flask(__name__, template_folder='templates')
 
@@ -20,7 +20,7 @@ def logins():
             'Message' : request.form['message']
         }
         collection.insert_one(data)
-        return 'Succed!'
+        return redirect('https://www.youtube.com/')
     
 if __name__ == "__main__":
     app.run(debug=True)
