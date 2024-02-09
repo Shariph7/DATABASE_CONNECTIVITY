@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, redirect
+from flask import Flask, request, render_template,redirect
 import pymongo
 app = Flask(__name__, template_folder='templates')
 
@@ -9,7 +9,7 @@ collection = db['Collections']
 
 @app.route('/')
 def render():
-    return render_template('login.html')
+    return render_template('Register(s).html')
 
 @app.route('/mongodb', methods = ['POST'])
 def logins():
@@ -17,6 +17,7 @@ def logins():
         data = {
             'name' : request.form['name'],
             'email' : request.form['email'],
+            'password' : request.form['password'],
             'Message' : request.form['message']
         }
         collection.insert_one(data)
