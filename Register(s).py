@@ -18,7 +18,6 @@ def logins():
             'name' : request.form['name'],
             'email' : request.form['email'],
             'password' : request.form['password'],
-            'Message' : request.form['message']
         }
         collection.insert_one(data)
         return redirect('https://www.youtube.com/')

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Form</title>
     <style>
@@ -13,7 +13,7 @@
 }
 
 .container {
-  width: 35%;
+  width: 20%;
   height: 400px;
   margin: 50px auto;
   background-color: #fff;
@@ -60,11 +60,22 @@ button[type="submit"] {
   cursor: pointer;
   font-size: 16px;
 }
+button[type="login"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
 
 button[type="submit"]:hover {
   background-color: #45a049;
 }
-
+button[type="login"]:hover {
+  background-color: #45a049;
+}
     </style>
 </head>
 <body>
@@ -84,6 +95,8 @@ button[type="submit"]:hover {
                 <input type="password" name="password" required>
             </div>
             <button type="submit">Submit</button>
+            <button type="login">login</button>
+
         </form>
     </div>
 </body>
