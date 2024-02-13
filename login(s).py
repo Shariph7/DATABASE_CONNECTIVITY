@@ -14,7 +14,7 @@ def index():
     return render_template('login(s).html')
 
 
-@app.route('/mongodb', methods=['POST'])
+@app.route('/MONGODB', methods=['POST'])
 def check_data():
     # Get data from the form
     email = request.form.get('email')
@@ -25,10 +25,10 @@ def check_data():
 
     if result:
         # Data exists in MongoDB
-        return redirect('https://www.facebook.com/')
+        return redirect('https://www.facebook.com')
     else:
         # Data does not exist in MongoDB
-        return 'ERROR'
+        return 'NOT REGISTER YET!'
 
     return jsonify(result)
 

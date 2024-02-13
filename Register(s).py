@@ -2,7 +2,7 @@ from flask import Flask, request, render_template,redirect
 import pymongo
 app = Flask(__name__, template_folder='templates')
 
-# Creating mongobd.
+# Creating mongodb.
 client = pymongo.MongoClient('mongodb://localhost:27017/')
 db = client['MONGODB']
 collection = db['Collections']
@@ -17,10 +17,10 @@ def logins():
         data = {
             'name' : request.form['name'],
             'email' : request.form['email'],
-            'password' : request.form['password'],
+            'password' : request.form['password']
         }
         collection.insert_one(data)
-        return redirect('https://www.youtube.com/')
+        return redirect("https://github.com/Shariph7")
     
 if __name__ == "__main__":
     app.run(debug=True)
